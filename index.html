@@ -1,28 +1,74 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f1e8">
-  <meta name="description" content="ROXPEDIA — a fan-made Ragnarok X reference library for monsters, items, jobs and useful tools.">
-  <title>ROXPEDIA — Midgard Reference</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="theme-color" content="#183b43">
+  <meta name="description" content="ROXPEDIA, prototype direktori dan tools Ragnarok X. Semua data gameplay yang ditampilkan masih contoh.">
+  <title>ROXPEDIA — Ragnarok X Reference</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="utility-bar"><div class="wrap utility-content"><span>ROXPEDIA <i>·</i> INDEPENDENT RAGNAROK X REFERENCE</span><span class="utility-right">DESIGN STUDY <b>02</b> <i>·</i> SAMPLE DATA</span></div></div>
-  <div class="wrap">
-    <header class="masthead">
-      <a class="wordmark" href="#/" aria-label="ROXPEDIA home"><span class="brand-glyph" aria-hidden="true">✦</span><span>ROX<strong>PEDIA</strong><small>THE MIDGARD INDEX</small></span></a>
-      <form class="site-search" id="global-search-form" role="search"><label for="global-search">Search the database</label><div class="site-search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7"/><path d="m16 16 5 5"/></svg><input id="global-search" type="search" placeholder="Search monsters, items, and more…" autocomplete="off"><kbd>/</kbd><button type="submit">SEARCH <span aria-hidden="true">↗</span></button></div></form>
-      <div class="masthead-side"><span class="eyebrow">AN ADVENTURER'S COMPANION</span><p>Made for the curious.<br>Built for the grind.</p></div>
-    </header>
+  <a class="skip-link" href="#page-content">Lewati navigasi</a>
+  <div class="utility-strip">
+    <div class="container-xl d-flex flex-wrap justify-content-between gap-2">
+      <span>ROXPEDIA <span class="utility-sep">/</span> RAGNAROK X REFERENCE</span>
+      <span class="d-none d-sm-inline">PROTOTYPE UI <span class="utility-sep">·</span> DATA DEMO, BELUM TERVERIFIKASI</span>
+    </div>
   </div>
-  <nav class="primary-nav" aria-label="Main navigation"><div class="wrap nav-inner">
-    <a href="#/" data-nav="home">Home</a><a href="#/monsters" data-nav="monsters">Monsters</a><a href="#/items" data-nav="items">Items &amp; cards</a><a href="#/jobs" data-nav="jobs">Jobs &amp; skills</a><span class="nav-separator" aria-hidden="true"></span><a href="#/tools" data-nav="tools">Calculators</a><a href="#/tracker" data-nav="tracker">Boss tracker</a><a href="#/about" data-nav="about">About</a>
-  </div></nav>
-  <main id="app" class="wrap app" tabindex="-1"></main>
-  <footer class="page-footer"><div class="wrap footer-inner"><div><b>ROXPEDIA</b><span>Independent Ragnarok X fan resource</span></div><p>Interface prototype · Content is illustrative and unverified.<br>Not affiliated with Gravity Co., Ltd.</p><a href="#/about">About this project ↗</a></div></footer>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Navigasi utama">
+      <div class="container-xl">
+        <a class="navbar-brand brand" href="#/" aria-label="ROXPEDIA, beranda">
+          <span class="brand-name"><span class="brand-rox">ROX</span>PEDIA<span class="brand-mark">.</span></span>
+          <span class="brand-caption">MIDGARD DATA LIBRARY</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Tampilkan navigasi"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="navbar-nav ms-lg-5 gap-lg-1">
+            <li class="nav-item"><a class="nav-link" data-route="home" href="#/">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" data-route="monsters" href="#/monsters">Monster</a></li>
+            <li class="nav-item"><a class="nav-link" data-route="items" href="#/items">Item &amp; Card</a></li>
+            <li class="nav-item"><a class="nav-link" data-route="jobs" href="#/jobs">Job &amp; Skill</a></li>
+            <li class="nav-item"><a class="nav-link" data-route="tools" href="#/tools">Tools</a></li>
+          </ul>
+          <div class="ms-lg-auto header-side"><span class="version-pill">UI STUDY / 03</span></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-xl page-shell">
+    <div class="row gx-lg-5">
+      <main class="col-12 col-lg-9 order-1 order-lg-2" id="page-content" tabindex="-1">
+        <div id="app" aria-live="polite"></div>
+      </main>
+      <aside class="col-12 col-lg-3 order-2 order-lg-1" aria-label="Direktori ROXPEDIA">
+        <div class="directory-aside">
+          <p class="aside-heading">DIRECTORY <span>01—06</span></p>
+          <nav class="side-nav" aria-label="Menu direktori">
+            <a href="#/monsters"><span>01</span> Monster database <b>↗</b></a>
+            <a href="#/items"><span>02</span> Items &amp; cards <b>↗</b></a>
+            <a href="#/jobs"><span>03</span> Jobs &amp; skills <b>↗</b></a>
+            <a href="#/tools"><span>04</span> Calculators <b>↗</b></a>
+            <a href="#/tracker"><span>05</span> MVP / Mini tracker <b>↗</b></a>
+            <a href="#/about"><span>06</span> About project <b>↗</b></a>
+          </nav>
+          <div class="aside-note">
+            <span class="note-label">CATATAN DATA</span>
+            <p>Halaman ini merupakan rancangan antarmuka. Level, statistik, dan drop monster menggunakan fixture contoh.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="container-xl d-flex flex-column flex-md-row justify-content-between gap-3">
+      <div><strong>ROXPEDIA</strong><span class="footer-dot"> / </span> Independent game reference</div>
+      <div>Prototype Bootstrap 5.3 <span class="footer-dot">·</span> Tidak berafiliasi dengan pemegang hak Ragnarok X.</div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <script src="app.js" defer></script>
 </body>
 </html>

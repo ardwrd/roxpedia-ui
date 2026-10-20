@@ -1,33 +1,44 @@
-# ROXPEDIA UI — Design study 02
+# ROXPEDIA UI — Bootstrap 5.3 Prototype
 
-A content-first, responsive interface concept for the independent Ragnarok X reference project **ROXPEDIA**.
+Experimental frontend for the ROXPEDIA Ragnarok X reference site. This version replaces the previous visual treatment with a compact, data-first interface and Bootstrap 5.3.8 components.
 
-This is **not the production application**. The initial concept was rejected because it resembled a generic SaaS/admin dashboard. V2 uses a compact game-reference layout instead: searchable tables, horizontal navigation, restrained artwork and faster paths to useful data.
+## Preview
 
-## Preview locally
+GitHub Pages (when Pages deployment is enabled):
+https://ardwrd.github.io/roxpedia-ui/
 
-Serve the repository root using `python -m http.server 8000` and visit `http://localhost:8000`. No install step is necessary. Hash routes work on GitHub Pages.
+This is an independent frontend prototype. It does not modify the CodeIgniter 4 legacy application or production database.
 
-## Prototype includes
+## Technology
 
-- Homepage with quick database links, monster preview and utilities
-- Search from any page (`/` keyboard shortcut) and dedicated monster filters
-- Monster directory with element and size filtering, accessible row navigation
-- Monster details, sample stats and clearly marked illustrative drop lists
-- Generic stamina arithmetic calculator with validation
-- Reserved routes for items, jobs and tracker
-- Desktop/mobile responsive layouts, clear focus states and reduced-motion support
+- Bootstrap 5.3.8, pinned CDN assets with integrity checks
+- Custom CSS for ROXPEDIA identity and layout
+- Vanilla JavaScript with hash-based routes for GitHub Pages
+- No bundler or build command required
 
-## Data integrity
+## Routes
 
-All monster details, combat stats, zone names and drops in `app.js` are **mock fixtures** and must not be treated as verified game information. Sample creature illustrations are original simple SVG placeholders, not extracted Ragnarok game assets. Replace mock data only after validating the source and game version.
+- #/ — Homepage, global search, database directory
+- #/monsters — Searchable monster list with element, size and sorting filters
+- #/monsters/poring — Example detail layout; other demo monsters also work
+- #/tools — Basic stamina subtraction demo
+- #/items, #/jobs, #/tracker — Clearly labeled placeholders
+- #/about — Project information
 
-## Production direction
+## Data accuracy
 
-The rebuild masterplan uses Next.js + TypeScript + Tailwind CSS for the frontend and Laravel 13 for the API/admin. This static interface is solely for reviewing layout and information architecture before implementing production components. No production systems are altered.
+Monster names, levels, combat attributes, locations and drops are unverified illustrative fixtures. Never treat prototype values as current Ragnarok X game facts. There are no licensed or extracted game images in the interface.
 
-## Deploy to GitHub Pages
+## Run locally
 
-In repository settings, under **Pages**, deploy from `main` and `/ (root)`. Then visit `https://ardwrd.github.io/roxpedia-ui/` once GitHub publishes the site.
+Open index.html in a browser with an internet connection. Bootstrap loads via CDN. For local development you may also serve the folder from any static HTTP server.
 
-ROXPEDIA is an independent fan resource and is not affiliated with Gravity Co., Ltd.
+## Next phases
+
+1. Audit old CodeIgniter Views markup and original site navigation.
+2. Build the remaining database and calculator screens.
+3. Align visual assets and naming with ROXPEDIA's real brand.
+4. Wire verified source data into API-driven views.
+5. Move approved components into the final production stack after an architecture decision.
+
+ROXPEDIA is an independent fan resource, unaffiliated with the owners of Ragnarok X.
